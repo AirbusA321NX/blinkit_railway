@@ -166,24 +166,32 @@ const server = http.createServer((req, res) => {
                             const mistralRes = JSON.parse(resBody);
                             const reply = mistralRes.choices ? mistralRes.choices[0].message.content : "Error reaching AI.";
                             
-                            // 1. Get Candidates (Keyword)
-                            const words = purifiedMessage.toLowerCase().split(/[ ,.!]+/).filter(w => w.length > 2);
+                            // 1. Get Candidates (Keyword) - Context Aware
+                            const replyWords = reply.toLowerCase().split(/[ ,.!]+/).filter(w => w.length > 2);
+                            const allKeywords = [...words, ...replyWords];
+                            
                             const candidates = products
                                 .map(p => {
                                     const pText = (p.name + ' ' + p.category + ' ' + p.desc).toLowerCase();
-                                    let score = words.reduce((s, w) => s + (pText.includes(w) ? 1 : 0), 0);
+                                    let score = allKeywords.reduce((s, w) => s + (pText.includes(w) ? 1 : 0), 0);
                                     return { ...p, score };
                                 })
                                 .filter(p => p.score > 0)
                                 .sort((a, b) => b.score - a.score)
                                 .slice(0, 15);
 
-                            // 2. Ask Mistral to Rerank (Sub-Request)
+                            if (candidates.length === 0) {
+                                res.writeHead(200, { 'Content-Type': 'application/json' });
+                                res.end(JSON.stringify({ reply, products: [], source: "Mistral AI" }));
+                                return;
+                            }
+
+                            // 2. AI Rerank: Pick cards based on Conversation Context
                             const rerankData = JSON.stringify({
                                 model: "mistral-large-latest",
                                 messages: [
-                                    { role: "system", content: "From this JSON list of products, pick the 4 most RELEVANT to the user's need. Return ONLY a comma-separated list of IDs. Example: 1, 5, 12, 102" },
-                                    { role: "user", content: `User Need: ${purifiedMessage}\nProducts: ${JSON.stringify(candidates.map(c => ({ id: c.id, name: c.name, desc: c.desc })))}` }
+                                    { role: "system", content: "You are a shopping expert. Based on the User's request and the AI's advice, pick the 4 most helpful product IDs from the list. Focus on context and recommendations. Return ONLY a comma-separated list of IDs." },
+                                    { role: "user", content: `CONTEXT:\nUser said: ${purifiedMessage}\nAI advised: ${reply}\n\nCATALOG:\n${JSON.stringify(candidates.map(c => ({ id: c.id, name: c.name, desc: c.desc })))}` }
                                 ]
                             });
 
@@ -191,6 +199,7 @@ const server = http.createServer((req, res) => {
                                 hostname: 'api.mistral.ai',
                                 path: '/v1/chat/completions',
                                 method: 'POST',
+                                timeout: 60000,
                                 headers: {
                                     'Content-Type': 'application/json',
                                     'Authorization': `Bearer ${MISTRAL_API_KEY}`
@@ -198,6 +207,7 @@ const server = http.createServer((req, res) => {
                             };
 
                             const rerankReq = https.request(rerankOptions, rerankRes => {
+                                console.log(`Rerank Status: ${rerankRes.statusCode}`);
                                 let rrBody = '';
                                 rerankRes.on('data', d => rrBody += d);
                                 rerankRes.on('end', () => {
