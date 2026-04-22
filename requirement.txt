@@ -1,0 +1,59 @@
+The idea combines AI search, personalization, RAG pipelines, and computer vision to improve user experience and product sales.
+
+Current issue:
+Users often don’t know exact product names. They think in needs like:
+
+- “I want something spicy”
+- “Need healthy breakfast”
+- “Show me what’s in this diet chart”
+- “Find this product from photo”
+
+Proposed AI Features:
+
+1. Conversational Smart Search (LLM + RAG Pipeline)
+ If a user types “I want spicy”, instead of showing chilli powder first, AI understands intent and retrieves relevant catalog products using a RAG pipeline, then recommends ready-to-eat items such as spicy Maggi, masala noodles, chips, or snacks.
+
+Among young users, many are confused about what to order. Instead of browsing endlessly, they can simply enter intent like:
+
+- “I want something tasty”
+- “Need a late night snack”
+- “Want quick breakfast”
+
+AI can instantly recommend suitable options.
+
+Future Scope:
+By using user age-group, purchase history, and region, recommendations can become hyper-personalized.
+
+Examples:
+
+- User in Bangalore types “I want a tasty snack” → recommends vada, banana chips, local favorites
+- User in Punjab types “Need evening snack” → recommends samosa, lassi pairings, namkeen
+- Student user types “Cheap filling meal” → budget combos
+
+This can be enhanced further through web search + regional trend signals + local specialties.
+
+2. Personalized Recommendations
+ If the user usually buys tea/snacks, recommendations adapt based on purchase history, session behavior, and current intent.
+
+3. Camera / Image Search
+ Upload a product photo or empty packet → instantly find the same or similar item for reorder.
+
+4. OCR Smart Cart Builder (Diet Charts / Prescriptions / Medical Terms)
+ Upload a doctor prescription, diet chart, handwritten grocery list, or nutrition plan. AI extracts text, understands terms, and recommends relevant products.
+
+Examples:
+
+- “100mg carbohydrates”
+- “High fiber diet”
+- “Low sodium”
+- “Protein supplement”
+- oats, almonds, skim milk, banana → cart generated instantly
+
+Business Impact:
+
+- Faster discovery
+- Higher conversions
+- Better product exposure
+- Lower search drop-offs
+- Better retention through personalization
+- Reduced friction for repeat purchases

@@ -1,0 +1,379 @@
+    {
+        "id": "301",
+        "name": "Fenugreek Seeds (Methi Dana) - 100g",
+        "category": "Pantry",
+        "price": 45,
+        "desc": "High-quality fenugreek seeds, essential for Indian tempering and health.",
+        "dietary": ["Veg", "Gluten-Free"],
+        "embedding": []
+    },
+    {
+        "id": "302",
+        "name": "Fresh Fenugreek (Methi) - 250g",
+        "category": "Vegetables",
+        "price": 30,
+        "desc": "Fresh green fenugreek leaves, perfect for parathas and curries.",
+        "dietary": ["Veg"],
+        "embedding": []
+    },
+    {
+        "id": 1,
+        "name": "Lay's India's Magic Masala",
+        "category": "Snacks",
+        "price": 20,
+        "dietary": "veg",
+        "desc": "Spicy and crunchy potato chips with classic Indian spices."
+    },
+    {
+        "id": 2,
+        "name": "Lay's Classic Salted",
+        "category": "Snacks",
+        "price": 20,
+        "dietary": "veg",
+        "desc": "Thin and crispy salted potato chips for classic snacking."
+    },
+    {
+        "id": 3,
+        "name": "Kurkure Masala Munch",
+        "category": "Snacks",
+        "price": 20,
+        "dietary": "veg",
+        "desc": "Crunchy corn snacks with a spicy chatpata flavor."
+    },
+    {
+        "id": 4,
+        "name": "Bingo Mad Angles Achaari Masti",
+        "category": "Snacks",
+        "price": 25,
+        "dietary": "veg",
+        "desc": "Triangular chips with a tangy pickle flavor."
+    },
+    {
+        "id": 5,
+        "name": "Haldiram's Aloo Bhujia",
+        "category": "Snacks",
+        "price": 55,
+        "dietary": "veg",
+        "desc": "Spicy and savory potato-based snack mix."
+    },
+    {
+        "id": 6,
+        "name": "Parle-G Gold Biscuits",
+        "category": "Snacks",
+        "price": 10,
+        "dietary": "veg",
+        "desc": "Iconic glucose biscuits for teatime."
+    },
+    {
+        "id": 7,
+        "name": "Oreo Vanilla Cream Biscuits",
+        "category": "Snacks",
+        "price": 35,
+        "dietary": "veg",
+        "desc": "Crunchy chocolate cookies with smooth vanilla cream inside."
+    },
+    {
+        "id": 8,
+        "name": "Hide & Seek Chocolate Chip Cookies",
+        "category": "Snacks",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Premium chocolate chip cookies for chocolate lovers."
+    },
+    {
+        "id": 9,
+        "name": "Pringles Original",
+        "category": "Snacks",
+        "price": 110,
+        "dietary": "veg",
+        "desc": "Classic potato-based chips in a stackable can."
+    },
+    {
+        "id": 10,
+        "name": "Pringles Sour Cream & Onion",
+        "category": "Snacks",
+        "price": 110,
+        "dietary": "veg",
+        "desc": "Tangy and creamy potato chips in a can."
+    },
+    {
+        "id": 11,
+        "name": "Cadbury Dairy Milk Silk",
+        "category": "Sweets",
+        "price": 80,
+        "dietary": "veg",
+        "desc": "Smooth and creamy milk chocolate bar."
+    },
+    {
+        "id": 12,
+        "name": "KitKat 4 Finger",
+        "category": "Sweets",
+        "price": 45,
+        "dietary": "veg",
+        "desc": "Crispy wafer bar covered in smooth milk chocolate."
+    },
+    {
+        "id": 13,
+        "name": "Ferrero Rocher (Pack of 3)",
+        "category": "Sweets",
+        "price": 150,
+        "dietary": "veg",
+        "desc": "Whole hazelnut in a crispy wafer shell with chocolate and nuts."
+    },
+    {
+        "id": 14,
+        "name": "Amul Dark Chocolate (55%)",
+        "category": "Sweets",
+        "price": 100,
+        "dietary": "veg",
+        "desc": "Rich and bitter-sweet chocolate bar with 55% cocoa."
+    },
+    {
+        "id": 15,
+        "name": "Snickers Peanut Bar",
+        "category": "Sweets",
+        "price": 50,
+        "dietary": "veg",
+        "desc": "Milk chocolate with peanuts, caramel, and nougat."
+    },
+    {
+        "id": 16,
+        "name": "Cadbury 5 Star",
+        "category": "Sweets",
+        "price": 20,
+        "dietary": "veg",
+        "desc": "Chewy chocolate bar with caramel and nougat."
+    },
+    {
+        "id": 17,
+        "name": "Kwality Wall's Cornetto Chocolate",
+        "category": "Sweets",
+        "price": 60,
+        "dietary": "veg",
+        "desc": "Crispy wafer cone filled with smooth chocolate ice cream."
+    },
+    {
+        "id": 18,
+        "name": "Mother Dairy Kulfi",
+        "category": "Sweets",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Traditional Indian frozen dessert on a stick."
+    },
+    {
+        "id": 19,
+        "name": "Amul Salted Butter (100g)",
+        "category": "Dairy",
+        "price": 58,
+        "dietary": "veg",
+        "desc": "Iconic salted butter made from pure milk."
+    },
+    {
+        "id": 20,
+        "name": "Amul Cheese Slices (100g)",
+        "category": "Dairy",
+        "price": 85,
+        "dietary": "veg",
+        "desc": "Processed cheese slices for sandwiches and burgers."
+    },
+    {
+        "id": 21,
+        "name": "Mother Dairy Toned Milk (500ml)",
+        "category": "Dairy",
+        "price": 28,
+        "dietary": "veg",
+        "desc": "Low-fat pasteurized toned milk in a poly pack."
+    },
+    {
+        "id": 22,
+        "name": "Epigamia Greek Yogurt (Blueberry)",
+        "category": "Dairy",
+        "price": 60,
+        "dietary": "veg",
+        "desc": "Creamy greek yogurt with real blueberry fruit."
+    },
+    {
+        "id": 23,
+        "name": "Milky Mist Paneer (200g)",
+        "category": "Dairy",
+        "price": 110,
+        "dietary": "veg",
+        "desc": "Fresh and soft malai paneer for Indian cooking."
+    },
+    {
+        "id": 24,
+        "name": "Farm Fresh Large Brown Eggs (Pack of 6)",
+        "category": "Dairy",
+        "price": 75,
+        "dietary": "egg",
+        "desc": "Nutritious and clean brown eggs from local farms."
+    },
+    {
+        "id": 25,
+        "name": "Coca-Cola (600ml)",
+        "category": "Beverages",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Refreshing classic carbonated soft drink."
+    },
+    {
+        "id": 26,
+        "name": "Thums Up (600ml)",
+        "category": "Beverages",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Strong and spicy Indian carbonated cola."
+    },
+    {
+        "id": 27,
+        "name": "Sprite (600ml)",
+        "category": "Beverages",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Lemon-lime flavored refreshing clear soft drink."
+    },
+    {
+        "id": 28,
+        "name": "Maaza Mango Drink (600ml)",
+        "category": "Beverages",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Iconic Alphonso mango based pulpy juice."
+    },
+    {
+        "id": 29,
+        "name": "Real Fruit Power Orange Juice",
+        "category": "Beverages",
+        "price": 110,
+        "dietary": "veg",
+        "desc": "100% natural orange juice in a tetra pack."
+    },
+    {
+        "id": 30,
+        "name": "Red Bull Energy Drink",
+        "category": "Beverages",
+        "price": 125,
+        "dietary": "veg",
+        "desc": "Premium energy drink for wings when you need them."
+    },
+    {
+        "id": 31,
+        "name": "Zorabian Chicken Nuggets (Pre-cooked)",
+        "category": "Meat",
+        "price": 240,
+        "dietary": "non-veg",
+        "desc": "Breaded and crispy pre-cooked chicken breast nuggets."
+    },
+    {
+        "id": 32,
+        "name": "Prasuma Chicken Momos (Classic)",
+        "category": "Meat",
+        "price": 295,
+        "dietary": "non-veg",
+        "desc": "Steamed chicken dumplings with a thin covering and juicy filling."
+    },
+    {
+        "id": 33,
+        "name": "ITC Master Chef Chicken Galouti Kebab",
+        "category": "Meat",
+        "price": 350,
+        "dietary": "non-veg",
+        "desc": "Traditional melt-in-the-mouth Lucknowi chicken kebabs."
+    },
+    {
+        "id": 34,
+        "name": "Salami Chicken Slices (Italian Herbs)",
+        "category": "Meat",
+        "price": 180,
+        "dietary": "non-veg",
+        "desc": "Freshly sliced chicken cold cuts with Italian seasoning."
+    },
+    {
+        "id": 35,
+        "name": "Zorabian Chicken Sausages (Spicy)",
+        "category": "Meat",
+        "price": 220,
+        "dietary": "non-veg",
+        "desc": "Spiced chicken sausages for breakfast and sandwiches."
+    },
+    {
+        "id": 36,
+        "name": "Raw Whole Chicken (Curry Cut)",
+        "category": "Meat",
+        "price": 250,
+        "dietary": "non-veg",
+        "desc": "Skinless whole chicken cut into pieces for curry."
+    },
+    {
+        "id": 37,
+        "name": "Maggi Masala Noodles (Pack of 4)",
+        "category": "Breakfast",
+        "price": 60,
+        "dietary": "veg",
+        "desc": "India's favorite instant noodles with a signature masala spice."
+    },
+    {
+        "id": 38,
+        "name": "Top Ramen Curry Noodles",
+        "category": "Breakfast",
+        "price": 15,
+        "dietary": "veg",
+        "desc": "Instant noodles with a rich and spicy curry flavor."
+    },
+    {
+        "id": 39,
+        "name": "Kellogg's Corn Flakes (Original)",
+        "category": "Breakfast",
+        "price": 180,
+        "dietary": "veg",
+        "desc": "Crispy and golden corn flakes for a healthy start."
+    },
+    {
+        "id": 40,
+        "name": "Quaker Oats (1kg)",
+        "category": "Breakfast",
+        "price": 199,
+        "dietary": "veg",
+        "desc": "100% whole grain oats for a nutritious and fibrous breakfast."
+    },
+    {
+        "id": 41,
+        "name": "Act II Popcorn (Butter Pepper)",
+        "category": "Snacks",
+        "price": 45,
+        "dietary": "veg",
+        "desc": "Instant microwave popcorn with a spicy butter flavor."
+    },
+    {
+        "id": 42,
+        "name": "Fenugreek Seeds (Methi)",
+        "category": "Groceries",
+        "price": 30,
+        "dietary": "veg",
+        "desc": "Bitter and aromatic seeds used in Indian curries and pickles."
+    },
+    {
+        "id": 43,
+        "name": "Cumin seeds (Jeera)",
+        "category": "Groceries",
+        "price": 40,
+        "dietary": "veg",
+        "desc": "Aromatic seeds essential for tempering Indian dishes."
+    },
+    {
+        "id": 44,
+        "name": "Turmeric powder (Haldi)",
+        "category": "Groceries",
+        "price": 50,
+        "dietary": "veg",
+        "desc": "Vibrant yellow spice known for its medicinal and culinary uses."
+    },
+    {
+        "id": 45,
+        "name": "Mustard seeds (Rai)",
+        "category": "Groceries",
+        "price": 25,
+        "dietary": "veg",
+        "desc": "Small black seeds used for tempering and flavor."
+    }
+]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinkit AI Shopping Concierge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Search View -->
+        <main class="hero-section">
+            <div class="glow-bg"></div>
+            <header>
+                <div class="logo">Blinkit <span class="ai-badge">AI</span></div>
+            </header>
+            
+            <div class="search-container">
+                <h1>Shop with Intelligence.</h1>
+                <p>Search for groceries, scan diet charts, or ask for recommendations.</p>
+                <div class="main-search-bar" id="open-assistant">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="What can I get for you today?" readonly>
+                    <div class="search-hint">Press Enter to chat</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Premium AI Sidebar -->
+        <aside class="ai-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="header-info">
+                    <div class="ai-avatar">B</div>
+                    <div>
+                        <h3>AI Concierge</h3>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <button class="close-btn" id="close-sidebar"><i data-lucide="x"></i></button>
+            </div>
+
+            <div class="chat-history" id="chat-history">
+                <div class="message assistant">
+                    <div class="message-content">
+                        Hi! I'm your Blinkit AI Assistant. How can I help you shop today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div id="image-preview-container" class="hidden">
+                    <img id="image-preview" src="" alt="Preview">
+                    <button id="remove-image"><i data-lucide="trash-2"></i></button>
+                </div>
+                <div class="input-wrapper">
+                    <label class="attach-btn">
+                        <i data-lucide="paperclip"></i>
+                        <input type="file" id="image-input" accept="image/*" hidden>
+                    </label>
+                    <input type="text" id="user-input" placeholder="Ask me anything...">
+                    <button class="send-btn" id="send-btn"><i data-lucide="send"></i></button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "blinkit-ai-concierge",
+  "version": "1.0.0",
+  "description": "AI Shopping Assistant for Blinkit",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,61 @@
+{
+	"name": "blinkit Lite",
+	"short_name": "blinkit Lite",
+	"description": "Order Online Grocery from blinkit, the Best Online Supermarket Store in India. Buy Household essentials, Beverages, Personal Care products & more from a wide range of groceries and home needs.\n✔ Best Prices & Offers ✔ Cash on Delivery ✔ Easy Returns",
+	"lang": "en-GB",
+	"start_url": "./",
+	"display": "standalone",
+	"theme_color": "#1c2224",
+	"background_color": "#F8CB46",
+	"orientation": "portrait",
+	"scope": "/",
+	"gcm_sender_id": "208615509893",
+	"icons": [
+		{
+			"src": "/images/icon-48x48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-72x72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-144x144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-152x152.png",
+			"sizes": "152x152",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-284x284.png",
+			"sizes": "284x284",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+
+	]
+}
