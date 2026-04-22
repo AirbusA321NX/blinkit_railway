@@ -3,13 +3,19 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-// Load .env manually
-const envContent = fs.readFileSync('.env', 'utf8');
-const env = {};
-envContent.split('\n').forEach(line => {
-    const [key, value] = line.split('=');
-    if (key && value) env[key.trim()] = value.trim();
-});
+// Load .env manually if it exists
+const env = process.env;
+try {
+    if (fs.existsSync('.env')) {
+        const envContent = fs.readFileSync('.env', 'utf8');
+        envContent.split('\n').forEach(line => {
+            const [key, value] = line.split('=');
+            if (key && value) env[key.trim()] = value.trim();
+        });
+    }
+} catch (e) {
+    console.log("No .env file found, using system environment variables.");
+}
 
 const PORT = process.env.PORT || 3000;
 const MISTRAL_API_KEY = env['MISTRAL_API_KEY'];
