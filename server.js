@@ -21,14 +21,27 @@ const PORT = process.env.PORT || 3000;
 const MISTRAL_API_KEY = env['MISTRAL_API_KEY'];
 const NVIDIA_API_KEY = env['NVIDIA_API_KEY'];
 
-// Load Products
-const productsPath = path.join(__dirname, 'products.json');
-let products = [];
-try {
-    products = JSON.parse(fs.readFileSync(productsPath, 'utf8'));
-} catch (e) {
-    console.error("products.json not found at: ", productsPath);
-}
+// Load Products (Aggressive Search)
+const findProducts = () => {
+    const paths = [
+        path.join(__dirname, 'products.json'),
+        path.join(process.cwd(), 'products.json'),
+        '/app/products.json',
+        './products.json'
+    ];
+    for (const p of paths) {
+        if (fs.existsSync(p)) {
+            console.log("SUCCESS: Catalog loaded from ", p);
+            return JSON.parse(fs.readFileSync(p, 'utf8'));
+        }
+    }
+    return [];
+};
+
+let products = findProducts();
+console.log(`Inventory Ready: ${products.length} items loaded.`);
+
+const ESSENTIALS = products.slice(0, 4); // Fallback items
 
 function cosineSimilarity(a, b) {
     if (!a || !b) return 0;
@@ -200,7 +213,7 @@ const server = http.createServer((req, res) => {
                                         res.end(JSON.stringify({ reply, products: finalRecs, source: "Mistral AI" }));
                                     } catch (e) {
                                         res.writeHead(200, { 'Content-Type': 'application/json' });
-                                        res.end(JSON.stringify({ reply, products: candidates.slice(0, 4), source: "Mistral AI (Fallback)" }));
+                                        res.end(JSON.stringify({ reply, products: candidates.length > 0 ? candidates.slice(0, 4) : ESSENTIALS, source: "Mistral AI (Fallback)" }));
                                     }
                                 });
                             });
@@ -208,7 +221,7 @@ const server = http.createServer((req, res) => {
                             rerankReq.end();
                         } catch (e) {
                             res.writeHead(200, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ reply: "Error reranking products.", products: [], source: "Local Fallback" }));
+                            res.end(JSON.stringify({ reply, products: ESSENTIALS, source: "Local Fallback" }));
                         }
                     });
                 });
