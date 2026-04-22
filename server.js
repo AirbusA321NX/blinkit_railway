@@ -213,11 +213,25 @@ const server = http.createServer((req, res) => {
                                 rerankRes.on('end', () => {
                                     try {
                                         const rrJson = JSON.parse(rrBody);
-                                        const ids = rrJson.choices[0].message.content.split(',').map(id => id.trim());
-                                        const finalRecs = products.filter(p => ids.includes(p.id.toString()));
+                                        const ids = (rrJson.choices[0].message.content || "").split(',').map(id => id.trim());
                                         
+                                        // 3. LettuceDetect Logic: Fact-check AI against Catalog
+                                        const factCheckedRecs = products.filter(p => ids.includes(p.id.toString()));
+                                        
+                                        // Reality Check: Remove words that don't match our real products
+                                        const groundedReply = reply.split(' ').map(word => {
+                                            if (word.length < 5) return word; 
+                                            const cleanWord = word.toLowerCase().replace(/[^a-z]/g, '');
+                                            const isReal = products.some(p => p.name.toLowerCase().includes(cleanWord));
+                                            return isReal ? word : ""; 
+                                        }).join(' ').replace(/\s+/g, ' ').trim();
+
                                         res.writeHead(200, { 'Content-Type': 'application/json' });
-                                        res.end(JSON.stringify({ reply, products: finalRecs, source: "Mistral AI" }));
+                                        res.end(JSON.stringify({ 
+                                            reply: groundedReply || reply, 
+                                            products: factCheckedRecs, 
+                                            source: "Mistral AI + LettuceDetect Guard" 
+                                        }));
                                     } catch (e) {
                                         res.writeHead(200, { 'Content-Type': 'application/json' });
                                         res.end(JSON.stringify({ reply, products: candidates.slice(0, 4), source: "Mistral AI (Fallback)" }));
